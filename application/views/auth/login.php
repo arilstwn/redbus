@@ -6,7 +6,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <title>redbus</title>
+    <title>RedBus</title>
     <style>
         * {
             margin: 0px;
@@ -16,6 +16,8 @@
         .form-group {
             position: relative;
         }
+        
+    
 
         .password-input-container {
             position: relative;
@@ -248,21 +250,17 @@
 
     <section class="bg-gray-50 min-h-screen flex items-center justify-center">
         <!--Login container-->
-        <div class="bg-gray-100 flex rounded-2x1 shadow-lg max-w-3x1 p-5 items-center">
+        <div class="bg-purple-100 flex rounded-2x1 shadow-lg max-w-3x1 p-5 items-center">
             <!-- From -->
             <div class="md:w-1/2 px-16">
               <h6 class="font-blod text-2x1 text-[#002D74]">Login</h6>
               <p class="text-sm mt-4 text-[#002D74]">Silahkan login terlebih dahulu</p>
 
-              <form action="" class="flex flex-col gap-4">
-                <input class="p-2 mt-8 rounded-x1 border" type="text" name="email" placeholder="Email">
+              <form action="<?php echo base_url('auth/aksi_login')?>" class="flex flex-col gap-4">
+                <input class="p-2 mt-8 rounded-x1 border" type="email" name="email" placeholder="Email">
                 <div class="assword-input-containe">
                     <input class="p-2 rounded-x1 border w-full" type="password" name="password" placeholder="Password">
                     <i class="password-toggle-login fa fa-eye-slash absolute top-1/2 right-3-translate-y-1/2" onclick="togglePassword()"></i>
-                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-eye absolute top-1/2 right-3-translate-y-1/2" viewBox="0 0 16 16">
-                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
-                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" viewBox="0 0 16 16"/>
-                      </svg> -->
                 </div>
                 <button class="bg-[#002D74] rounded-x1 text-white py-2 hover:scale-110 duration-300">Login</button>
               </form>

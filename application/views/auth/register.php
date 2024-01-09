@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>redbus</title>
+    <title>RedBus</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <title>redbus</title>
+    
     <style>
         * {
             margin: 0px;
@@ -249,13 +249,13 @@
     
     <section class="bg-gray-50 min-h-screen flex items-center justify-center">
         <!--Login container-->
-        <div class="bg-gray-100 flex rounded-2x1 shadow-lg max-w-3x1 p-5 items-center">
+        <div class="bg-purple-100 flex rounded-2x1 shadow-lg max-w-3x1 p-5 items-center">
             <!-- From -->
             <div class="md:w-1/2 px-16">
               <h5 class="font-blod text-2x1 text-[#002D74]">Register</h5>
               <p class="text-sm mt-4 text-[#002D74]">Silahkan register dulu semisal belum memiliki akun! </p>
 
-              <form action="" class="flex flex-col gap-4">
+              <form action="<?php echo base_url('Auth/aksi_register') ?>" class="flex flex-col gap-4">
                 <input class="p-2 mt-8 rounded-x1 border" type="text" name="nama" placeholder="Nama">
                 <input class="p-2 rounded-x1 border" type="text" name="email" placeholder="Email">
                 <div class="assword-input-containe">
@@ -291,7 +291,8 @@
             </div>
             <!-- Images -->
             <div class="md:block hidden w-1/2">
-                <img class="sm:block hidden rounded-2x1" src="<?php echo base_url('image/register.png') ?>" alt="">
+            <img src="<?php echo base_url() ?>image/register.png" class="GroupImage">
+                <!-- <img class="sm:block hidden rounded-2x1" src="<?php echo base_url(😑) ?>image/register.png" alt=""> -->
             </div>
 
         </div>

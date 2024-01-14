@@ -252,10 +252,10 @@
         <div class="bg-purple-100 flex rounded-2x1 shadow-lg max-w-3x1 p-5 items-center">
             <!-- From -->
             <div class="md:w-1/2 px-16">
-              <h5 class="font-blod text-2x1 text-[#002D74]">Register</h5>
+              <h5 class="font-blod text-2x1 text-[#002D74]">Register Pelanggan</h5>
               <p class="text-sm mt-4 text-[#002D74]">Silahkan register dulu semisal belum memiliki akun! </p>
 
-              <form action="<?php echo base_url('Auth/aksi_register') ?>" class="flex flex-col gap-4">
+              <form action="<?php echo base_url('Auth/aksi_register_pelanggan') ?>" class="flex flex-col gap-4">
                 <input class="p-2 mt-8 rounded-x1 border" type="nama" name="nama" placeholder="Nama">
                 <input class="p-2 rounded-x1 border" type="email" name="email" placeholder="Email">
                 <div class="assword-input-containe">

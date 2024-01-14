@@ -1,8 +1,7 @@
 <?php
 class M_model extends CI_Model
 {
-    function get_data($table)
-    {
+    function get_data($table){
         return $this->db->get($table);
     }
     public function get_image_by_id($table, $id)
@@ -33,9 +32,18 @@ class M_model extends CI_Model
     //     return $data;
     // }
 
+ 
+  
     public function register($data) {
         $this->db->insert('admin', $data);
     }
-  
+    public function register_pelanggan($data) {
+        $this->db->insert('pelanggan', $data);
+    }
+
+    public function tambah_data($table, $data)
+    {
+        $this->db->insert($table, $data);
+    }
   
 }

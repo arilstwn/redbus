@@ -536,7 +536,7 @@ barbers." />
 
 
     <div class="header-nav-item header-nav-item--external">
-      <a href="https://fortworthbarbershop.square.site/"  target="_blank"  data-animation-role="header-element">Shop</a>
+      <a href="<?php echo base_url('auth/login') ?>"  target="_blank"  data-animation-role="header-element">Login</a>
     </div>
   
 
@@ -560,8 +560,8 @@ barbers." />
                   
                     <div class="header-title-logo">
                       <a href="/" data-animation-role="header-element">
-                      <picture><source media="only screen and (pointer: coarse) and (max-width: 1024px), screen and (max-width: 799px)" srcset="//images.squarespace-cdn.com/content/v1/5f0087fc0414060b9b15c82d/1600100451072-TIFXK7L9R0EF8S8YEGXE/FWBS_logo.png?format=1500w"><source media="only screen and (pointer: coarse) and (min-width: 1025px), screen and (min-width: 800px)" srcset="https://img.okezone.com/okz/500/content/2022/05/24/52/2599127/10-po-bus-tertua-di-indonesia-ada-yang-sudah-eksis-sebelum-indonesia-merdeka-dHBCOqtcZO.JPG">
-<img src="" alt="Fort Worth Barber Shop" style="display:block" fetchpriority="high" loading="eager" decoding="async" data-loader="raw"></picture>
+                      <picture><source media="only screen and (pointer: coarse) and (max-width: 1024px), screen and (max-width: 799px)" srcset=""><source media="only screen and (pointer: coarse) and (min-width: 1025px), screen and (min-width: 800px)" srcset="">
+<img src="" alt="" style="display:block" fetchpriority="high" loading="eager" decoding="async" data-loader="raw"></picture>
 
                       </a>
                     </div>
@@ -570,8 +570,8 @@ barbers." />
                   
                     <div class="header-mobile-logo">
                       <a href="/" data-animation-role="header-element">
-                        <picture><source media="only screen and (pointer: coarse) and (max-width: 1024px), screen and (max-width: 799px)" srcset="//images.squarespace-cdn.com/content/v1/5f0087fc0414060b9b15c82d/1600100451072-TIFXK7L9R0EF8S8YEGXE/FWBS_logo.png?format=1500w"><source media="only screen and (pointer: coarse) and (min-width: 1025px), screen and (min-width: 800px)" srcset="https://img.okezone.com/okz/500/content/2022/05/24/52/2599127/10-po-bus-tertua-di-indonesia-ada-yang-sudah-eksis-sebelum-indonesia-merdeka-dHBCOqtcZO.JPG">
-<img src="//images.squarespace-cdn.com/content/v1/5f0087fc0414060b9b15c82d/1600100451072-TIFXK7L9R0EF8S8YEGXE/FWBS_logo.png?format=1500w" alt="Fort Worth Barber Shop" style="display:block" fetchpriority="high" loading="eager" decoding="async" data-loader="raw"></picture>
+                        <picture><source media="only screen and (pointer: coarse) and (max-width: 1024px), screen and (max-width: 799px)" srcset=""><source media="only screen and (pointer: coarse) and (min-width: 1025px), screen and (min-width: 800px)" srcset="">
+<img src="" alt="" style="display:block" fetchpriority="high" loading="eager" decoding="async" data-loader="raw"></picture>
 
                       </a>
                     </div>
@@ -591,7 +591,7 @@ barbers." />
                 <div class="header-actions-action header-actions-action--social">
                   
                     
-                      <a class="icon icon--fill  header-icon header-icon-border-shape-none header-icon-border-style-outline"  href="https://www.instagram.com/fortworthbarbershop" target="_blank" aria-label="instagram-unauth">
+                      <a class="icon icon--fill  header-icon header-icon-border-shape-none header-icon-border-style-outline"  href="https://www.instagram.com/redbusindonesia/" target="_blank" aria-label="instagram-unauth">
                         <svg viewBox="23 23 64 64">
                           <use xlink:href="#instagram-unauth-icon" width="110" height="110"></use>
                         </svg>
@@ -749,7 +749,7 @@ barbers." />
 
 
     <div class="header-nav-item header-nav-item--external">
-      <a href="https://fortworthbarbershop.square.site/"  target="_blank"  data-animation-role="header-element">Shop</a>
+      <a href="https://fortworthbarbershop.square.site/"  target="_blank"  data-animation-role="header-element">Login</a>
     </div>
   
 
@@ -773,8 +773,8 @@ barbers." />
                   
                     <div class="header-title-logo">
                       <a href="/" data-animation-role="header-element">
-                      <picture><source media="only screen and (pointer: coarse) and (max-width: 1024px), screen and (max-width: 799px)" srcset="//images.squarespace-cdn.com/content/v1/5f0087fc0414060b9b15c82d/1600100451072-TIFXK7L9R0EF8S8YEGXE/FWBS_logo.png?format=1500w"><source media="only screen and (pointer: coarse) and (min-width: 1025px), screen and (min-width: 800px)" srcset="//images.squarespace-cdn.com/content/v1/5f0087fc0414060b9b15c82d/1600100414162-EOQACJ51FNBHUFZQZMXN/FWBS_logo.png?format=1500w">
-<img src="//images.squarespace-cdn.com/content/v1/5f0087fc0414060b9b15c82d/1600100414162-EOQACJ51FNBHUFZQZMXN/FWBS_logo.png?format=1500w" alt="Fort Worth Barber Shop" style="display:block" fetchpriority="high" loading="eager" decoding="async" data-loader="raw"></picture>
+                      <picture><source media="" srcset="">
+<img src="" alt="" style="display:block" fetchpriority="high" loading="eager" decoding="async" data-loader="raw"></picture>
 
                       </a>
                     </div>
@@ -783,8 +783,8 @@ barbers." />
                   
                     <div class="header-mobile-logo">
                       <a href="/" data-animation-role="header-element">
-                        <picture><source media="only screen and (pointer: coarse) and (max-width: 1024px), screen and (max-width: 799px)" srcset="//images.squarespace-cdn.com/content/v1/5f0087fc0414060b9b15c82d/1600100451072-TIFXK7L9R0EF8S8YEGXE/FWBS_logo.png?format=1500w"><source media="only screen and (pointer: coarse) and (min-width: 1025px), screen and (min-width: 800px)" srcset="//images.squarespace-cdn.com/content/v1/5f0087fc0414060b9b15c82d/1600100414162-EOQACJ51FNBHUFZQZMXN/FWBS_logo.png?format=1500w">
-<img src="//images.squarespace-cdn.com/content/v1/5f0087fc0414060b9b15c82d/1600100451072-TIFXK7L9R0EF8S8YEGXE/FWBS_logo.png?format=1500w" alt="Fort Worth Barber Shop" style="display:block" fetchpriority="high" loading="eager" decoding="async" data-loader="raw"></picture>
+                        <picture><source media="" srcset="">
+<img src="" alt="" style="display:block" fetchpriority="high" loading="eager" decoding="async" data-loader="raw"></picture>
 
                       </a>
                     </div>
@@ -1101,7 +1101,7 @@ barbers." />
       
     >
       <div class="header-menu-nav-item-content">
-        About
+        ppp
       </div>
     </a>
   </div>
@@ -1118,7 +1118,7 @@ barbers." />
   </div>
 
   <div class="container header-menu-nav-item header-menu-nav-item--external">
-    <a href="https://fortworthbarbershop.square.site/"  target="_blank" >Shop</a>
+    <a href="https://fortworthbarbershop.square.site/"  target="_blank" >Login</a>
   </div>
 
 </div>
@@ -1400,12 +1400,22 @@ barbers." />
 
 
 
+<br>
+<br>
+<br>
 
 
 
 
-
-
+<div class="header-actions-action header-actions-action--cta" data-animation-role="header-element">
+                <a
+                  class="btn btn--border theme-btn--primary-inverse sqs-button-element--primary"
+                  href="<?php echo base_url('auth/login') ?>"
+                  target="_blank"
+                >
+                  Login 
+                </a>
+              </div>
 
 
 
@@ -1451,423 +1461,6 @@ barbers." />
   
 
 
-<section
-  data-test="page-section"
-  
-  data-section-theme="black"
-  class='page-section 
-    
-      layout-engine-section
-    
-    background-width--full-bleed
-    
-      section-height--medium
-    
-    
-      content-width--wide
-    
-    horizontal-alignment--center
-    vertical-alignment--middle
-    
-      
-    
-    
-    black'
-  
-  data-section-id="5f00889271cd8a1362737497"
-  
-  data-controller="SectionWrapperController"
-  data-current-styles="{
-&quot;imageOverlayOpacity&quot;: 0.15,
-&quot;backgroundWidth&quot;: &quot;background-width--full-bleed&quot;,
-&quot;sectionHeight&quot;: &quot;section-height--medium&quot;,
-&quot;horizontalAlignment&quot;: &quot;horizontal-alignment--center&quot;,
-&quot;verticalAlignment&quot;: &quot;vertical-alignment--middle&quot;,
-&quot;contentWidth&quot;: &quot;content-width--wide&quot;,
-&quot;customContentWidth&quot;: 100,
-&quot;sectionTheme&quot;: &quot;black&quot;,
-&quot;sectionAnimation&quot;: &quot;none&quot;,
-&quot;backgroundMode&quot;: &quot;image&quot;
-}"
-  data-current-context="{
-&quot;video&quot;: {
-&quot;playbackSpeed&quot;: 0.5,
-&quot;filter&quot;: 1,
-&quot;filterStrength&quot;: 0,
-&quot;zoom&quot;: 0,
-&quot;videoSourceProvider&quot;: &quot;none&quot;
-},
-&quot;backgroundImageId&quot;: null,
-&quot;backgroundMediaEffect&quot;: null,
-&quot;divider&quot;: null,
-&quot;typeName&quot;: &quot;page&quot;
-}"
-  data-animation="none"
-  
-   
-  
-  
->
-  <div
-    class="section-border" 
-    
-  >
-    <div class="section-background">
-    
-      
-    
-    </div>
-  </div>
-  <div
-    class='content-wrapper'
-    style='
-      
-        
-      
-    '
-  >
-    <div
-      class="content"
-      
-    >
-      
-      
-      
-      
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-        
-        <div class="section-background-overlay" style="opacity: 0.15;"></div>
-      
-    
-    </div>
-  </div>
-  <div
-    class='content-wrapper'
-    style='
-      
-        
-      
-    '
-  >
-    <div
-      class="content"
-      
-    >
-      
-      
-      
-      
-      
-      
-      <div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section" id="page-section-5f170d3b4590a24607d41452"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block spacer-block sqs-block-spacer sized vsize-1" data-block-type="21" id="block-5ad7f2ff2d6c5ca6de15"><div class="sqs-block-content">&nbsp;</div></div></div></div></div>
-    </div>
-  
-  </div>
-  
-</section>
-
-  
-    
-    
-
-
-  
-
-
-<section
-  data-test="page-section"
-  
-  data-section-theme="bright"
-  class='page-section 
-    
-      layout-engine-section
-    
-    background-width--full-bleed
-    
-      section-height--large
-    
-    
-      content-width--wide
-    
-    horizontal-alignment--center
-    vertical-alignment--middle
-    
-      
-    
-    
-    bright'
-  
-  data-section-id="5f00889271cd8a136273749b"
-  
-  data-controller="SectionWrapperController"
-  data-current-styles="{
-&quot;imageOverlayOpacity&quot;: 0.15,
-&quot;backgroundWidth&quot;: &quot;background-width--full-bleed&quot;,
-&quot;sectionHeight&quot;: &quot;section-height--large&quot;,
-&quot;customSectionHeight&quot;: 45,
-&quot;horizontalAlignment&quot;: &quot;horizontal-alignment--center&quot;,
-&quot;verticalAlignment&quot;: &quot;vertical-alignment--middle&quot;,
-&quot;contentWidth&quot;: &quot;content-width--wide&quot;,
-&quot;sectionTheme&quot;: &quot;bright&quot;,
-&quot;sectionAnimation&quot;: &quot;none&quot;,
-&quot;backgroundMode&quot;: &quot;image&quot;
-}"
-  data-current-context="{
-&quot;video&quot;: {
-&quot;playbackSpeed&quot;: 0.5,
-&quot;filter&quot;: 1,
-&quot;filterStrength&quot;: 0,
-&quot;zoom&quot;: 0,
-&quot;videoSourceProvider&quot;: &quot;none&quot;
-},
-&quot;backgroundImageId&quot;: null,
-&quot;backgroundMediaEffect&quot;: null,
-&quot;divider&quot;: null,
-&quot;typeName&quot;: &quot;page&quot;
-}"
-  data-animation="none"
-  
-   
-  
-    
-  
-  
->
-  <div
-    class="section-border" 
-    
-  >
-    <div class="section-background">
-    
-      
-    
-    </div>
-  </div>
-  <div
-    class='content-wrapper'
-    style='
-      
-        
-      
-    '
-  >
-    <div
-      class="content"
-      
-    >
-      
-      
-      
-      
-      
-      
-      <div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section" id="page-section-5f00889271cd8a136273749b"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_1_1594137721907_17428"><div class="sqs-block-content">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-    
-  
-    <div
-        class="
-          image-block-outer-wrapper
-          layout-caption-hidden
-          design-layout-inline
-          combination-animation-site-default
-          individual-animation-site-default
-          individual-text-animation-site-default
-        "
-        data-test="image-block-inline-outer-wrapper"
-    >
-
-      
-
-      
-        <figure
-            class="
-              sqs-block-image-figure
-              intrinsic
-            "
-            style="max-width:2500px;"
-        >
-          
-        
-        
-
-        
-          
-            
-          <div
-              
-              
-              class="image-block-wrapper"
-              data-animation-role="image"
-              
-  
-
-          >
-            <div class="sqs-image-shape-container-element
-              
-          
-        
-              has-aspect-ratio
-            " style="
-                position: relative;
-                
-                  padding-bottom:10.920000076293945%;
-                
-                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);
-              "
-              >
-                
-                  
-                  
-                  
-                  
-
-          
-            
-          
-        
-      </main>
-      <script type="text/javascript">
-        const firstSection = document.querySelector('.page-section');
-        const header = document.querySelector('.header');
-        const mobileOverlayNav = document.querySelector('.header-menu');
-        const sectionBackground = firstSection ? firstSection.querySelector('.section-background') : null;
-        const headerHeight = header ? header.getBoundingClientRect().height : 0;
-        const firstSectionHasBackground = firstSection ? firstSection.className.indexOf('has-background') >= 0 : false;
-        const isFirstSectionInset = firstSection ? firstSection.className.indexOf('background-width--inset') >= 0 : false;
-        const isLayoutEngineSection = firstSection ? firstSection.className.indexOf('layout-engine-section') >= 0 : false;
-
-        if (firstSection) {
-          firstSection.style.paddingTop = headerHeight + 'px';
-        }
-        if (sectionBackground && isLayoutEngineSection) {
-          if (isFirstSectionInset) {
-            sectionBackground.style.top = headerHeight + 'px';
-          } else {
-            sectionBackground.style.top = '';
-          }
-        }
-        //# sourceURL=headerPositioning.js
-      </script>
-
-      
-        <footer class="sections" id="footer-sections" data-footer-sections>
-  
-  
-  
-  
-  
-  
-    
-    
-
-
-  
 
 
 <section
@@ -1968,300 +1561,15 @@ barbers." />
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   
 
     
   
-    <div
-        class="
-          image-block-outer-wrapper
-          layout-caption-hidden
-          design-layout-inline
-          combination-animation-site-default
-          individual-animation-site-default
-          individual-text-animation-site-default
-        "
-        data-test="image-block-inline-outer-wrapper"
-    >
-
-      
-
-      
-        <figure
-            class="
-              sqs-block-image-figure
-              intrinsic
-            "
-            style="max-width:1017px;"
-        >
-          
-        
-        
-
-        
-          
-            
-          <div
-              
-              
-              class="image-block-wrapper"
-              data-animation-role="image"
-              
-  
-
-          >
-            <div class="sqs-image-shape-container-element
-              
-          
-        
-              has-aspect-ratio
-            " style="
-                position: relative;
-                
-                  padding-bottom:60.46511459350586%;
-                
-                overflow: hidden;-webkit-mask-image: -webkit-radial-gradient(white, black);
-              "
-              >
-                
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  <img data-stretch="false" data-src="https://images.squarespace-cdn.com/content/v1/5f0087fc0414060b9b15c82d/1594136261119-KO9ZDU39IITEEOZOGFBQ/FWBS_logo.png" data-image="https://images.squarespace-cdn.com/content/v1/5f0087fc0414060b9b15c82d/1594136261119-KO9ZDU39IITEEOZOGFBQ/FWBS_logo.png" data-image-dimensions="1017x650" data-image-focal-point="0.5,0.5" alt="FWBS_logo.png" data-load="false" elementtiming="system-image-block" src="https://images.squarespace-cdn.com/content/v1/5f0087fc0414060b9b15c82d/1594136261119-KO9ZDU39IITEEOZOGFBQ/FWBS_logo.png" width="1017" height="650" alt="" sizes="(max-width: 640px) 100vw, (max-width: 767px) 16.666666666666664vw, 16.666666666666664vw" style="display:block;object-fit: cover; width: 100%; height: 100%; object-position: 50% 50%" onload="this.classList.add(&quot;loaded&quot;)" srcset="https://images.squarespace-cdn.com/content/v1/5f0087fc0414060b9b15c82d/1594136261119-KO9ZDU39IITEEOZOGFBQ/FWBS_logo.png?format=100w 100w, https://images.squarespace-cdn.com/content/v1/5f0087fc0414060b9b15c82d/1594136261119-KO9ZDU39IITEEOZOGFBQ/FWBS_logo.png?format=300w 300w, https://images.squarespace-cdn.com/content/v1/5f0087fc0414060b9b15c82d/1594136261119-KO9ZDU39IITEEOZOGFBQ/FWBS_logo.png?format=500w 500w, https://images.squarespace-cdn.com/content/v1/5f0087fc0414060b9b15c82d/1594136261119-KO9ZDU39IITEEOZOGFBQ/FWBS_logo.png?format=750w 750w, https://images.squarespace-cdn.com/content/v1/5f0087fc0414060b9b15c82d/1594136261119-KO9ZDU39IITEEOZOGFBQ/FWBS_logo.png?format=1000w 1000w, https://images.squarespace-cdn.com/content/v1/5f0087fc0414060b9b15c82d/1594136261119-KO9ZDU39IITEEOZOGFBQ/FWBS_logo.png?format=1500w 1500w, https://images.squarespace-cdn.com/content/v1/5f0087fc0414060b9b15c82d/1594136261119-KO9ZDU39IITEEOZOGFBQ/FWBS_logo.png?format=2500w 2500w" loading="lazy" decoding="async" data-loader="sqs">
-
-                
-            </div>
-          </div>
-        
-          
-        
-
-        
-      
-        </figure>
-      
-
-    </div>
-  
-
-
-  
-
-
-</div></div><div class="sqs-block socialaccountlinks-v2-block sqs-block-socialaccountlinks-v2" data-block-type="54" id="block-4b396617c2118a293760"><div class="sqs-block-content">
-
-
-
-<div class="sqs-svg-icon--outer social-icon-alignment-left social-icons-color- social-icons-size-small social-icons-style-regular " >
-  <style>
-    #block-4b396617c2118a293760 .social-icons-style-border .sqs-svg-icon--wrapper {
-      
-        box-shadow: 0 0 0 2px inset;
-      
-      border: none; 
-    }
-  </style>
-  <nav class="sqs-svg-icon--list">
-    <a href="https://www.instagram.com/fortworthbarbershop" target="_blank" class="sqs-svg-icon--wrapper instagram-unauth" aria-label="instagram-unauth">
-      <div>
-        <svg class="sqs-svg-icon--social" viewBox="0 0 64 64">
-          <use class="sqs-use--icon" xlink:href="#instagram-unauth-icon"></use>
-          <use class="sqs-use--mask" xlink:href="#instagram-unauth-mask"></use>
-        </svg>
-      </div>
-    </a><a href="https://www.facebook.com/fortworthbarbershop" target="_blank" class="sqs-svg-icon--wrapper facebook-unauth" aria-label="facebook-unauth">
-      <div>
-        <svg class="sqs-svg-icon--social" viewBox="0 0 64 64">
-          <use class="sqs-use--icon" xlink:href="#facebook-unauth-icon"></use>
-          <use class="sqs-use--mask" xlink:href="#facebook-unauth-mask"></use>
-        </svg>
-      </div>
-    </a><a href="https://twitter.com/fwbarbershop" target="_blank" class="sqs-svg-icon--wrapper twitter-unauth" aria-label="Twitter">
-      <div>
-        <svg class="sqs-svg-icon--social" viewBox="0 0 64 64">
-          <use class="sqs-use--icon" xlink:href="#twitter-unauth-icon"></use>
-          <use class="sqs-use--mask" xlink:href="#twitter-unauth-mask"></use>
-        </svg>
-      </div>
-    </a>
-  </nav>
-</div>
-</div></div></div><div class="col sqs-col-2 span-2"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-027f33eeb09180d35fd2"><div class="sqs-block-content">
-
-<div class="sqs-html-content">
-  <p class="" style="white-space:pre-wrap;"><a href="/services">Services</a></p><p class="" style="white-space:pre-wrap;"><a href="/about">About</a></p><p class="" style="white-space:pre-wrap;"><a href="/contact">Contact</a></p><p class="" style="white-space:pre-wrap;"><a href="https://fortworthbarbershop.square.site/" target="_blank">Shop</a></p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-
-</div></div></div></div></div><div class="col sqs-col-5 span-5"><div class="row sqs-row"><div class="col sqs-col-3 span-3"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_1_1595258829824_20130"><div class="sqs-block-content">
-
-<div class="sqs-html-content">
-  <p class="" style="white-space:pre-wrap;"><strong>Hours</strong><br>Tues-Fri 9:00am-6:00pm<br>Sat 9:00am-3:00pm<br>Closed Sun &amp; Mon</p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-
-</div></div></div><div class="col sqs-col-2 span-2"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_1_1595258829824_50542"><div class="sqs-block-content">
-
-<div class="sqs-html-content">
-  <p class="" style="white-space:pre-wrap;"><strong>Location</strong><br>3529 Lovell Avenue<br>Fort Worth, TX 76107<br><a href="tel:+18177315252">817.731.5252</a></p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-
-</div></div></div></div></div><div class="col sqs-col-1 span-1"><div class="sqs-block spacer-block sqs-block-spacer sized vsize-1" data-block-type="21" id="block-yui_3_17_2_1_1595259297592_22298"><div class="sqs-block-content">&nbsp;</div></div></div><div class="col sqs-col-2 span-2"><div class="sqs-block button-block sqs-block-button" data-block-type="53" id="block-yui_3_17_2_1_1594136764145_7575"><div class="sqs-block-content">
-
-<div
-  class="sqs-block-button-container sqs-block-button-container--left"
-  data-animation-role="button"
-  data-alignment="left"
-  data-button-size="medium"
-  data-button-type="primary"
->
-  <a
-    href="https://squareup.com/appointments/book/4cd0bdf2-5879-48ab-96c5-52cd5d2a47c5/EN9XTXFJ8YSNP/date"
-    class="sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element"
     
-  >
-    Book Now
-  </a>
-</div>
-</div></div></div></div><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block horizontalrule-block sqs-block-horizontalrule" data-block-type="47" id="block-yui_3_17_2_1_1595258829824_49369"><div class="sqs-block-content"><hr /></div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_1_1595258829824_36895"><div class="sqs-block-content">
 
 <div class="sqs-html-content">
   <p class="" style="white-space:pre-wrap;">©2024 Website RedBus.</p>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
 
 
 

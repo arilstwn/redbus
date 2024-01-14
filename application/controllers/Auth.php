@@ -39,7 +39,7 @@ class Auth extends CI_Controller {
              redirect(base_url('auth/login'));
          }
      } else {
-         redirect(base_url('admin/index'));
+         redirect(base_url('pelanggan/index'));
      }
  }
 
@@ -54,7 +54,7 @@ class Auth extends CI_Controller {
         'username'      => $this->input->post('username'),
         'email'         => $this->input->post('email'),
         'password'      => $this->input->post('password'),
-        'role'      => 'pelanggan',
+        'role'      => 'admin',
         
     ];
 
@@ -65,6 +65,23 @@ class Auth extends CI_Controller {
 
 
 
+ public function register_pelanggan()
+ {
+    $this->load->view('auth/register_pelanggan');
+ }
+
+ public function aksi_register_pelanggan()
+  {
+    $data = [
+        'username' => $this->input->post('username'),
+      'email' => $this->input->post('email'),
+      'password' => $this->input->post('password'),
+    ];
+
+    $this->m_model->tambah_data('pelanggan', $data);
+    redirect(base_url('auth/login'));
+  }
+
 
 
 
@@ -72,5 +89,11 @@ class Auth extends CI_Controller {
  {
     $this->load->view('auth/forgot_password');
  }
+
+  
+function logout_akun() {
+    $this->session->sess_destroy();
+    redirect(base_url('auth/login'));
+  }
 
 }

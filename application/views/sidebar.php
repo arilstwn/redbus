@@ -1,180 +1,429 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sewa Ruang</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/heroicons@2.3.0/dist/heroicons.min.js" defer></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@12.11.5/dist/sweetalert2.min.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--css-->
+    <link rel="stylesheet" href="style.css">
 
-<body class="bg-white min-h-screen font-base items-center">
-  <div id="app" class="flex flex-col md:flex-row w-full">
-    <aside style="background-color: #2b3131;" class="w-full md:w-64 md:min-h-screen bg-blue-900 text-white" x-data="{ isOpen: window.innerWidth >= 768 }" @resize.window="isOpen = window.innerWidth >= 768">
-      <div style="background-color: #2b3131;" class="flex items-center justify-between bg-gray-900 p-4 h-16">
-        <div class="flex items-center">
-          <img src="<?php echo base_url('image/image/169788354104_19397-3470087783-ph elaina.jpeg') ?>" class="mt-2 w-32 md:w-40">
-        </div>
-        <div class="flex md:hidden">
-          <button type="button" @click="isOpen = !isOpen" class="text-gray-300 hover:text-gray-500 focus:outline-none focus:text-gray-500">
-            <svg class="fill-current w-8" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-              <path d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-      <div class="px-2 py-6 items-center" :class="{ 'hidden': !isOpen, 'block': isOpen }" x-show="isOpen">
-        <ul>
-          <!-- Your existing sidebar content here -->
-          <li class="px-2 py-3 rounded mt-2 transition duration-200 hover:bg-gradient-to-r hover:from-gray-300 hover:to-blue-500">
-            <a href="<?php echo base_url('absensi') ?>" class="flex items-center">
-            <i class="fa-solid fa-house"></i>
-              <span class="mx-2 text-white font-semibold m-0">Home</span>
-            </a>
-          </li>
-          <li class="px-2 py-3 rounded mt-2 transition duration-200 hover:bg-gradient-to-r hover:from-gray-300 hover:to-blue-500">
-            <a href="<?php echo base_url('Absensi/history') ?>" class="flex items-center">
-            <i class="fa-solid fa-clock-rotate-left"></i>
-              <span class="mx-2 text-white font-semibold">History</span>
-            </a>
-          </li>
-          <li class="px-2 py-3 rounded mt-2 transition duration-200 hover:bg-gradient-to-r hover:from-gray-300 hover:to-blue-500">
-            <a href="<?php echo base_url('Absensi/absensi') ?>" class="flex items-center">
-            <i class="fa-solid fa-address-book"></i>
-              <span class="mx-2 text-white font-semibold">Absensi</span>
-            </a>
-          </li>
-          <li class="px-2 py-3 rounded mt-2 transition duration-200 hover:bg-gradient-to-r hover:from-gray-300 hover:to-blue-500">
-            <a href="<?php echo base_url('Absensi/izin') ?>" class="flex items-center">
-            <i class="fa-solid fa-user-pen"></i>
-              <span class="mx-2 text-white font-semibold">Izin</span>
-            </a>
-          </li>
-          <li class="px-2 py-3 rounded mt-2 transition duration-200 hover:bg-gradient-to-r hover:from-gray-300 hover:to-blue-500">
-            <a href="<?php echo base_url('Absensi/akun') ?>" class="flex items-center">
-            <i class="fa-solid fa-circle-user"></i>
-              <span class="mx-2.5 text-white font-semibold">Profil</span>
-            </a>
-          </li>
-          <li class="px-1 py-1 rounded mt-2 transition duration-200 hover:bg-gradient-to-r hover:from-gray-300 hover:to-blue-500 md:hidden">
-            <hr>
-            <a onclick="KeluarOP()" class="flex items-center pt-4">
-              <i class="fa-solid fa-right-from-bracket text-white mt-0"></i>
-              <span class="text-white font-semibold mx-2 mb-0">Keluar</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </aside>
-    <!-- Main Content -->
-    <div class="w-full md:flex-1">
-      <nav style="background-color: #2b3131;" class="hidden md:flex justify-between items-center p-0 shadow-md h-16">
-        <ul class="px-1 py-1 rounded mt-0 transition duration-200 hover:bg-gradient-to-r hover:from-gray-300 hover:to-blue-500 text-center ml-auto">
-          <a onclick="logout()" class="flex items-center">
-            <i class="fa-solid fa-right-from-bracket text-white mt-0"></i>
-            <span class="text-white font-semibold mx-2 mb-0">Keluar</span>
-          </a>
-        </ul>
-      </nav>
+    <!--Boxicons css-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-      <script>
-        function displaySweetAlert() {
-          const login_supervisor = "<?php echo $this->session->flashdata('login_supervisor'); ?>";
-
-          if (login_supervisor) {
-            Swal.fire({
-              title: 'Login Berhasil',
-              text: login_supervisor,
-              icon: 'success',
-              showConfirmButton: false, // Untuk menghilangkan tombol OK
-              timer: 2500 // Tambahkan timer di sini (dalam milidetik)
-            });
-          }
-        }
-
-        function logout(id) {
-    swal.fire({
-        title: ' Yakin Ingin Log Out',
-        text: "",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        cancelButtonText: 'Batal',
-        confirmButtonText: 'Log Out'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            Swal.fire({
-                icon: 'success',
-                title: 'Log Out',
-                showConfirmButton: false,
-                timer: 1500,
-
-            }).then(function() {
-                window.location.href = "<?php echo base_url('auth/logout_akun/')?>" + id;
-            });
-        }
-    });
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+:root{
+    /* ===== colors ====== */
+    --body-color: #E4E9F7;
+    --sidebar-color: #FFF;
+    --primary-color: #695CFE;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
 
-        // Gráfica de Usuarios
-        var usersChart = new Chart(document.getElementById('usersChart'), {
-          type: 'doughnut',
-          data: {
-            labels: ['Nuevos', 'Registrados'],
-            datasets: [{
-              data: [30, 65],
-              backgroundColor: ['#00F0FF', '#8B8B8D'],
-            }]
-          },
-          options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            legend: {
-              position: 'bottom' // Ubicar la leyenda debajo del círculo
-            }
-          }
-        });
+    /* ===== transition ===== */
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
 
-        // Gráfica de Comercios
-        var commercesChart = new Chart(document.getElementById('commercesChart'), {
-          type: 'doughnut',
-          data: {
-            labels: ['Nuevos', 'Registrados'],
-            datasets: [{
-              data: [60, 40],
-              backgroundColor: ['#FEC500', '#8B8B8D'],
-            }]
-          },
-          options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            legend: {
-              position: 'bottom' // Ubicar la leyenda debajo del círculo
-            }
-          }
-        });
-        // Menutup sidebar ketika lebar layar kurang dari 768px
-        window.addEventListener('resize', () => {
-          const windowWidth = window.innerWidth;
-          const isMobile = windowWidth < 768;
+body {
+    height: 100vh;
+    background: var(--body-color);
+    transition: var(--tran-05);
+}
 
-          if (isMobile) {
-            document.querySelector('[x-data="{ isOpen: true }"]').__x.$data.isOpen = false;
-          } else {
-            document.querySelector('[x-data="{ isOpen: true }"]').__x.$data.isOpen = true;
-          }
-        });
-      </script>
+body.drak {
+    --body-color: #18191A;
+    --sidebar-color: #242526;
+    --primary-color: #3A3B3C;
+    --primary-color-light: #3A3B3C;
+    --toggle-color: #FFF;
+    --text-color: #CCC;
+}
+
+/* ===== sidebar ===== */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background: var(--sidebar-color);
+    transition: var(--tran-05);
+    z-index: 100;
+}
+
+.sidebar.close {
+    width: 88px;
+}
+
+/* ===== resuable css ===== */
+.sidebar .text {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: var(--tran-04);
+    white-space: nowrap;
+    opacity: 1;
+}
+ 
+.sidebar.close .text {
+    opacity: 0;
+}
+
+.sidebar .image {
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar li {
+    height: 50px;
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    font-size: 20px;
+}
+
+.sidebar li .icon,
+.sidebar li .text {
+    color: var(--text-color);
+    transition: var(--tran-02);
+}
+
+.sidebar header {
+    position: relative;
+}
+
+.sidebar .image-text img {
+    width: 40px;
+    border-radius: 6px;
+}
+
+.sidebar header .image-text {
+    display: flex;
+    align-items: center;
+}
+
+header .image-text .header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-text .name {
+    font-weight: 600;
+
+}
+.header-text .profession {
+    margin-top: -2px;
+}
+
+.sidebar header .toggle {
+    position: absolute;
+    top: 50px;
+    right: -25px;
+    transform: translate(-50%) rotate(180deg);
+    height: 25px;
+    width: 25px;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--sidebar-color);
+    font-size: 22px;
+    transition: var(--tran-03);
+}
+.sidebar.close header .toggle {
+    transform: translateY(-50%);
+}
+
+body.drak .sidebar header .toggle {
+    color: var(--text-color);
+}
+
+.sidebar .search-box {
+    background: var(--primary-color-light);
+    border-radius: 6px;
+}
+
+.sidebar .menu {
+    margin-top: 35px;
+}
+
+.search-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    background: var(--primary-color-light);
+    transition: var(--tran-05);
+}
+
+.sidebar li a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 6px;
+    transform: var(--tran-04);
+}
+
+.sidebar li a:hover {
+    background: var(--primary-color);
+}
+
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text {
+    color: var(--sidebar-color);
+}
+
+body.drak .sidebar li a:hover .icon,
+body.drak .sidebar li a:hover .text {
+    color: var(--text-color);
+}
+
+.sidebar .menu-bar {
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-bar .mode {
+    position: relative;
+    border-radius: 6px;
+    background: var(--primary-color-light);
+}
+
+.menu-bar .mode .moon-sun {
+    height: 50px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-bar .mode i {
+    position: absolute;
+    transition: var(--tran-03);
+}
+
+.menu-bar .mode i.sun {
+    opacity: 0;
+}
+
+body.drak .menu-bar .mode i.sun {
+    opacity: 1;
+}
+
+body.drak .menu-bar .mode i.moon {
+    opacity: 0;
+}
+
+.menu-bar .mode .toggle-switch {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-width: 60px;
+    cursor: pointer;
+    border-radius: 6px;
+    background: var(--primary-color-light);
+    transition: var(--tran-05);
+}
+
+.toggle-switch .switch {
+    position: relative;
+    height: 22px;
+    width: 44px;
+    border-radius: 25px;
+    background: var(--toggle-color);
+}
+
+.switch::before {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background: var(--sidebar-color);
+    transition: var(--tran-03);
+}
+
+body.drak .switch::before {
+    left: 24px;
+}
+
+.home {
+    position: relative;
+    height: 100vh;
+    left: 250px;
+    width: calc(100% - 250px);
+    background: var(--body-color);
+    transition: var(--tran-05);
+}
+
+.home .text {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 8px 40px;
+}
+
+.sidebar.close ~ .home {
+    left: 88px;
+    width: calc(100% - 88px);
+}
+    </style>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="elen.webp" alt="elen">
+                </span>
+
+                <div class="text header-text">
+                    <span class="name">codinglab</span>
+                    <span class="profession">web deloper</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <a href="">
+                        <i class='bx bx-search icon'></i>
+                        <input type="text" placeholder="Search....">
+                    </a>
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="">
+                            <i class='bx bx-bar-chart-alt-2 icon'></i>
+                            <span class="text nav-text">Revenue</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Notifications</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="">
+                        <i class='bx bx-user-circle icon' ></i>
+                            <span class="text nav-text">Akun</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="">
+                            <i class='bx bx-heart icon'></i>
+                            <span class="text nav-text">Likes</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="">
+                            <i class='bx bx-wallet icon'></i>
+                            <span class="text nav-text">Wallets</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="moon-sun">
+                        <i class='bx bx-moon icon moon'></i> 
+                        <i class='bx bx-sun icon sun'></i> 
+                    </div>
+                    <span class="mode-text text">Dark Mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <section class="home">
+        <div class="text">Dasboard</div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        const body = document.querySelector("body"),
+      sidebar = body.querySelector(".sidebar"),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwtich = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+      toggle.addEventListener("click", () =>{
+        sidebar.classList.toggle("close");
+      })
+      searchBtn.addEventListener("click", () =>{
+        sidebar.classList.remove("close");
+      })
+
+
+      modeSwtich.addEventListener("click", () =>{
+        body.classList.toggle("drak");
+
+        if(body.classList.contains("drak")){
+            modeText.innerText = "Light Mode"
+        }else{
+            modeText.innerText = "Drak Mode"
+        }
+      })
+    </script>
+
 </body>
-
 </html>

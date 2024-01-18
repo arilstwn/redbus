@@ -3,316 +3,254 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>RedBus</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <style>
-        * {
-            margin: 0px;
-            font-family: "DM Sans", sans-serif;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;;
+}
 
-        .form-group {
-            position: relative;
-        }
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4070f4;
+}
 
-        .password-input-container {
-            position: relative;
-        }
+.container {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0, 0.1);
+}
 
-        .password-input-container input {
-            padding-right: 30px;
-            /* Menambahkan ruang di sebelah kanan untuk ikon mata */
-        }
+.container .form {
+    padding: 30px;
+}
 
-        .password-toggle-login {
-            position: absolute;
-            top: 60%;
-            right: 760px;
-            /* Menyesuaikan posisi ikon ke kanan */
-            transform: translateY(-100%);
-            cursor: pointer;
-        }
-
-        .LoginPageContainer {
-            height: 100vh;
-            overflow: auto;
-        }
-
-        .showPassword {
-            margin-left: 19.5rem;
-        }
-
-        .LoginPageInnerContainer {
-            display: flex;
-            min-height: 100%;
-        }
-
-        .LoginPageInnerContainer .ImageContianer {
-            width: 40%;
-            background-color: #4F709C;
-            min-height: 100%;
-            padding: 5%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .LoginPageInnerContainer .ImageContianer .GroupImage {
-            width: 70%;
-            display: block;
-        }
-
-        .LoginPageInnerContainer .LoginFormContainer {
-            flex-grow: 2;
-            background-color: white;
-            min-height: 100%;
-            padding: 5%;
-            background: url(https://i.imgur.com/BKyjjFa.png) no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
-
-        .LoginPageInnerContainer .LoginFormContainer .LogoContainer .logo {
-            height: 60px;
-            margin-bottom: 30px;
-        }
-
-        .LoginPageInnerContainer .LoginFormContainer .header {
-            font-size: 32px;
-            font-weight: 500;
-        }
-
-        .LoginPageInnerContainer .LoginFormContainer .subHeader {
-            color: #9aa4ad;
-            margin-top: 5px;
-            margin-bottom: 40px;
-        }
-
-        .LoginPageInnerContainer .LoginFormContainer .inputContainer {
-            color: #3f3f45;
-            margin: 20px 0px;
-        }
-
-        .LoginPageInnerContainer .LoginFormContainer .inputContainer .label {
-            display: flex;
-            width: 100%;
-            justify-content: flex-start;
-            align-items: center;
-            margin-right: 7px;
-            margin-bottom: 10px;
-        }
-
-        .LoginPageInnerContainer .LoginFormContainer .inputContainer .label .labelIcon {
-            width: 20px;
-            margin-right: 10px;
-            display: block;
-        }
-
-        .LoginPageInnerContainer .LoginFormContainer .inputContainer .input {
-            display: block;
-            width: calc(100% - 20px);
-            font-size: 15px;
-            padding: 10px;
-            border: 1px solid #d6d7db;
-            border-radius: 5px;
-            margin-top: 5px;
-            outline: 0px !important;
-        }
-
-        .LoginPageInnerContainer .LoginFormContainer .OptionsContainer {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .LoginFormContainer {
-            display: flex;
-            align-items: center;
-        }
-
-        .LoginFormInnerContainer {
-            max-width: 500px;
-        }
-
-        .LoginPageInnerContainer .LoginFormContainer .checkbox {
-            width: 15px;
-            height: 15px;
-            margin: 0px;
-            display: block;
-            border: 1px solid #d6d7db;
-        }
-
-        .LoginPageInnerContainer .LoginFormContainer .checkboxContainer {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-        }
-
-        .LoginPageInnerContainer .LoginFormContainer .checkboxContainer label {
-            display: block;
-            padding: 0px 5px;
-            color: #9aa4ad;
-        }
-
-        .LoginPageInnerContainer .LoginFormContainer .ForgotPasswordLink {
-            color: #e7483b;
-            text-decoration: none;
-        }
-
-        .LoginFormContainer .LoginFormInnerContainer .LoginButton {
-            margin-top: 30px;
-            display: block;
-            width: 100%;
-            padding: 10px;
-            border-radius: 20px;
-            font-weight: bold;
-            color: white;
-            background-color: #4F709C;
-            border: 0px;
-            outline: 0px;
-            cursor: pointer;
-        }
-
-        .LoginFormContainer .LoginFormInnerContainer .LoginButton:active {
-            background-color: #4F709C;
-        }
+.container .form .title {
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
 
 
-        @media only screen and (max-width: 1200px) {
-            .LoginPageInnerContainer .ImageContianer {
-                width: 50%;
-            }
-        }
+.form .title::before {
+    content: '';
+    position: absolute;
+    left: o;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #4070f4;
+    border-radius: 25px;
+}
 
-        @media only screen and (max-width: 800px) {
-            .LoginPageInnerContainer .ImageContianer {
-                display: none;
-            }
+.form .input-field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
 
-            .form-group {
-                position: relative;
-            }
+.input-field input {
+    position: absolute;
+    height:  100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+}
 
-            .password-toggle-login {
-                position: absolute;
-                top: 55%;
-                transform: translateY(-50%);
-                right: 0.5rem;
-                cursor: pointer;
-            }
+.input-field input:is(:focus, :valid) {
+    border-bottom-color: #4070f4;
+}
 
+.input-field i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+}
 
-            .LoginFormContainer {
-                justify-content: center;
-            }
-        }
+.input-field input:is(:focus, :valid) ~ i {
+    border-bottom-color: #4070f4;
+}
 
-        .LoginPageContainer::-webkit-scrollbar {
-            width: 5px;
-        }
+.input-field i.icon {
+    left: 0;
+}
 
-        .LoginPageContainer::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
+.input-field i.showHidePw {
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
 
-        .ImageContianer .LoginPageContainer::-webkit-scrollbar-thumb {
-            background: #2e1f7a;
-        }
+.form .checkbox-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
 
-        .LoginPageContainer::-webkit-scrollbar-thumb:hover {
-            background: #4520ff;
-        }
+.checkbox-text .checkbox-content {
+    display: flex;
+    align-items: center;
+}
 
-        .header-text {
-            font-weight: bold;
-            font-size: 15px;
-        }
+.checkbox-content input {
+    margin:  0 8px -2px 4px;
+    accent-color: #4070f4;
+}
 
-        .forgetPass {
-            font-size: 15px;
-            color: #4F709C;
-            font-weight: bold;
-        }
+.form .text {
+    color: #333;
+    font-size: 14px;
+}
 
-        .forgetPass a {
-            color: #4F709C;
-            text-decoration: none;
-        }
+.form a.text {
+    color: #4070f4;
+    text-decoration: none;
+}
+
+.form a:hover {
+    text-decoration: underline;
+}
+
+.form .button {
+    margin-top: 35px;
+}
+
+.form .button input {
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #4070f4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover {
+    background-color: #265df2;
+}
+
+.form .login-signup {
+    margin-top: 30px;
+    text-align: center;
+}
+button {
+  width: 80%;
+  height: 6vh;
+  border-radius: 100px;
+  outline: none;
+  border: none;
+  background-color: #4070f4;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 7% 10%;
+  
+}
+
+button:hover {
+  scale: 0.99;
+}
+
     </style>
-    
 </head>
 <body>
-    
-    <section class="bg-gray-50 min-h-screen flex items-center justify-center">
-        <!--Login container-->
-        <div class="bg-purple-100 flex rounded-2x1 shadow-lg max-w-3x1 p-5 items-center">
-            <!-- From -->
-            <div class="md:w-1/2 px-16">
-              <h5 class="font-blod text-2x1 text-[#002D74]">Register Pelanggan</h5>
-              <p class="text-sm mt-4 text-[#002D74]">Silahkan register dulu semisal belum memiliki akun! </p>
+    <div class="container">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Register</span>
 
-              <form action="<?php echo base_url('Auth/aksi_register_pelanggan') ?>" class="flex flex-col gap-4">
-                <input class="p-2 mt-8 rounded-x1 border" type="nama" name="nama" placeholder="Nama">
-                <input class="p-2 rounded-x1 border" type="email" name="email" placeholder="Email">
-                <div class="assword-input-containe">
-                    <input class="p-2 rounded-x1 border w-full" type="password" name="password" placeholder="Password">
-                    <i class="password-toggle-login fa fa-eye-slash absolute top-1/2 right-3-translate-y-1/2" onclick="togglePassword()"></i>
-                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-eye absolute top-1/2 right-3-translate-y-1/2" viewBox="0 0 16 16">
-                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
-                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" viewBox="0 0 16 16"/>
-                      </svg> -->
+                <form action="<?php echo base_url('auth/aksi_register_pelanggan') ?>" method="post">
+                 <div class="input-field">
+                    <input type="text" name="username" placeholder="Enter your name" required>
+                    <i class="uil uil-user icon"></i>
+                 </div>
+                 <div class="input-field">
+                    <input type="text" name="email" placeholder="Enter your email" required>
+                    <i class="uil uil-envelope icon"></i>
+                 </div>
+                 <div class="input-field">
+                    <input type="password" class="password" name="password" placeholder="Enter your password" required>
+                    <i class="uil uil-lock icon"></i>
+                 </div>
+                 <div class="input-field">
+                    <input type="password" class="password" namee="password" placeholder="Enter your password" required>
+                    <i class="uil uil-lock icon"></i>
+                    <i class="uil uil-eye-slash showHidePw"></i>
+                 </div>
+
+                 <div class="checkbox-text">
+                    <div class="checkbox-content">
+                         <input type="checkbox" id="logCheck">
+                         <label for="logCheck" class="text">Remember me</label>
+                    </div>
+
+                    <a href="" class="text">Forgot password</a>
+                 </div>
+
+                 <div class="input-field button">
+                 <button>Register</button>
+                 </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Not a member?</span>
+                    <a href="#" class="text signup-text">Signup Now</a>
                 </div>
-                <button class="bg-[#002D74] rounded-x1 text-white py-2 hover:scale-110 duration-300">Register</button>
-              </form>
-
-              <div class="at-10 grid grid-cols-3 items-center text-gray-400">
-                <hr class="border-gray-400">
-                <p class="text-center">OR</p>
-                <hr class="border-gray-400">
-              </div>
-
-              <button class="bg-white border py-2 w-full rounded-x1 mt-5 flex justify-center items-center text-sm hover:scale-110 duration-300">
-                <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="25px"viewBox="0 0 48 48">
-                    <path fill="#fbc02d" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12	s5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24s8.955,20,20,20	s20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#e53935" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039	l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#4caf50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36	c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#1565c0" d="M43.611,20.083L43.595,20L42,20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571	c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
-                    </svg>Login with Google
-              </button>
-
-              <p class="mt-5 text-xs border-b border-gray-400 py-4"> 
-                Forgot your password
-              </p>
-
-              <div class="mt-3 text-xs flex justify-between items-center">
-                
-              </div>
-            </div>
-            <!-- Images -->
-            <div class="md:block hidden w-1/2">
-            <img src="<?php echo base_url() ?>image/logo.png" class="GroupImage">
-                <!-- <img class="sm:block hidden rounded-2x1" src="<?php echo base_url(😑) ?>image/register.png" alt=""> -->
             </div>
 
+            
         </div>
+    </div>
+    <script src="register.js"></script>
+    <script>
+        const container = document.querySelector(".container"),
+      pwShowHide = document.querySelectorAll(".showHidePw"),
+      pwFields = document.querySelectorAll(".password");
 
-    </section>
-    <script type="text/javascript">
-    function togglePassword() {
-        var passwordField = document.getElementById('password');
-        var passwordToggle = document.querySelector('.password-toggle-login');
+      // js code to show/hide password aand chage icon
 
-        if (passwordField.type === "password") {
-            passwordField.type = "text";
-            passwordToggle.classList.remove('fa-eye-slash');
-            passwordToggle.classList.add('fa-eye');
-        } else {
-            passwordField.type = "password";
-            passwordToggle.classList.remove('fa-eye');
-            passwordToggle.classList.add('fa-eye-slash');
-        }
-    }
-</script>
+    pwShowHide.forEach(eyeIcon => {
+        eyeIcon.addEventListener("click", ()=> {
+            pwFields.forEach(pwField =>{
+                if(pwField.type ==="password"){
+                    pwField.type = "text";
+
+                    pwShowHide.forEach(icon =>{
+                        icon.classList.replace("uil-eye-slash", "uil-eye");
+                    })
+                }else{
+                    pwField.type = "password";
+
+                    pwShowHide.forEach(icon =>{
+                        icon.classList.replace("uil-eye", "uil-eye-slash");
+                    })
+                }
+            })
+        })
+    })
+    </script>
 </body>
 </html>

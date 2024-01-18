@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #322c2c;
+            background-color: #fff;
             margin: 0;
             padding: 0;
             display: flex;
@@ -73,7 +73,7 @@
 
 <body>
     <!-- Sidebar -->
-    <?php $this->load->view('sidebars'); ?>
+ 
     <header>
         <h1>Tambah Kelas bus</h1>
     </header>

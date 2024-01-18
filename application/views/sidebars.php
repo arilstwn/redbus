@@ -1,452 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--css-->
+    <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-
-    <!--Boxicons css-->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Document</title>
+    <title>Sidebar With Bootstrap</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-*{
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
+*,
+::after,
+::before {
     box-sizing: border-box;
 }
 
-:root{
-    /* ===== colors ====== */
-    --body-color: #E4E9F7;
-    --sidebar-color: #FFF;
-    --primary-color: #695CFE;
-    --primary-color-light: #F6F5FF;
-    --toggle-color: #DDD;
-    --text-color: #707070;
-
-    /* ===== transition ===== */
-    --tran-02: all 0.2s ease;
-    --tran-03: all 0.3s ease;
-    --tran-04: all 0.4s ease;
-    --tran-05: all 0.5s ease;
-}
-
 body {
-    height: 100vh;
-    background: var(--body-color);
-    transition: var(--tran-05);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-image: url("https://codzsword.github.io/bootstrap-sidebar/background-image.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
 }
 
-body.drak {
-    --body-color: #18191A;
-    --sidebar-color: #242526;
-    --primary-color: #3A3B3C;
-    --primary-color-light: #3A3B3C;
-    --toggle-color: #FFF;
-    --text-color: #CCC;
+h3 {
+    font-size: 1.2375rem;
+    color: #FFF;
 }
 
-/* ===== sidebar ===== */
-
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 250px;
-    padding: 10px 14px;
-    background: var(--sidebar-color);
-    transition: var(--tran-05);
-    z-index: 100;
-}
-
-.sidebar.close {
-    width: 88px;
-}
-
-/* ===== resuable css ===== */
-.sidebar .text {
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--text-color);
-    transition: var(--tran-04);
-    white-space: nowrap;
-    opacity: 1;
-}
- 
-.sidebar.close .text {
-    opacity: 0;
-}
-
-.sidebar .image {
-    min-width: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.sidebar li {
-    height: 50px;
-    margin-top: 10px;
-    list-style: none;
-    display: flex;
-    align-items: center;
-}
-
-.sidebar li .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 60px;
-    font-size: 20px;
-}
-
-.sidebar li .icon,
-.sidebar li .text {
-    color: var(--text-color);
-    transition: var(--tran-02);
-}
-
-.sidebar header {
-    position: relative;
-}
-
-.sidebar .image-text img {
-    width: 40px;
-    border-radius: 6px;
-}
-
-.sidebar header .image-text {
-    display: flex;
-    align-items: center;
-}
-
-header .image-text .header-text {
-    display: flex;
-    flex-direction: column;
-}
-
-.header-text .name {
-    font-weight: 600;
-
-}
-.header-text .profession {
-    margin-top: -2px;
-}
-
-.sidebar header .toggle {
-    position: absolute;
-    top: 50px;
-    right: -25px;
-    transform: translate(-50%) rotate(180deg);
-    height: 25px;
-    width: 25px;
-    background: var(--primary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    color: var(--sidebar-color);
-    font-size: 22px;
-    transition: var(--tran-03);
-}
-.sidebar.close header .toggle {
-    transform: translateY(-50%);
-}
-
-body.drak .sidebar header .toggle {
-    color: var(--text-color);
-}
-
-.sidebar .search-box {
-    background: var(--primary-color-light);
-    border-radius: 6px;
-}
-
-.sidebar .menu {
-    margin-top: 35px;
-}
-
-.search-box input {
-    height: 100%;
-    width: 100%;
-    outline: none;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: 500;
-    background: var(--primary-color-light);
-    transition: var(--tran-05);
-}
-
-.sidebar li a {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    border-radius: 6px;
-    transform: var(--tran-04);
-}
-
-.sidebar li a:hover {
-    background: var(--primary-color);
-}
-
-.sidebar li a:hover .icon,
-.sidebar li a:hover .text {
-    color: var(--sidebar-color);
-}
-
-body.drak .sidebar li a:hover .icon,
-body.drak .sidebar li a:hover .text {
-    color: var(--text-color);
-}
-
-.sidebar .menu-bar {
-    height: calc(100% - 50px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.menu-bar .mode {
-    position: relative;
-    border-radius: 6px;
-    background: var(--primary-color-light);
-}
-
-.menu-bar .mode .moon-sun {
-    height: 50px;
-    width: 60px;
-    display: flex;
-    align-items: center;
-}
-
-.menu-bar .mode i {
-    position: absolute;
-    transition: var(--tran-03);
-}
-
-.menu-bar .mode i.sun {
-    opacity: 0;
-}
-
-body.drak .menu-bar .mode i.sun {
-    opacity: 1;
-}
-
-body.drak .menu-bar .mode i.moon {
-    opacity: 0;
-}
-
-.menu-bar .mode .toggle-switch {
-    position: absolute;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    min-width: 60px;
+a {
     cursor: pointer;
-    border-radius: 6px;
-    background: var(--primary-color-light);
-    transition: var(--tran-05);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
 }
 
-.toggle-switch .switch {
+li {
+    list-style: none;
+}
+
+/* Layout skeleton */
+
+.wrapper {
+    align-items: stretch;
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    max-width: 264px;
+    min-width: 264px;
+    transition: all 0.35s ease-in-out;
+    box-shadow: 0 0 35px 0 rgba(49, 57, 66, 0.5);
+    z-index: 1111;
+}
+
+/* Sidebar collapse */
+
+#sidebar.collapsed {
+    margin-left: -264px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+}
+
+.sidebar-logo {
+    padding: 1.15rem 1.5rem;
+}
+
+.sidebar-logo a {
+    color: #e9ecef;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.sidebar-nav {
+    padding: 0;
+}
+
+.sidebar-header {
+    color: #e9ecef;
+    font-size: .75rem;
+    padding: 1.5rem 1.5rem .375rem;
+}
+
+a.sidebar-link {
+    padding: .625rem 1.625rem;
+    color: #e9ecef;
     position: relative;
-    height: 22px;
-    width: 44px;
-    border-radius: 25px;
-    background: var(--toggle-color);
+    display: block;
+    font-size: 1rem;
 }
 
-.switch::before {
-    content: '';
+.sidebar-link[data-bs-toggle="collapse"]::after {
+    border: solid;
+    border-width: 0 .075rem .075rem 0;
+    content: "";
+    display: inline-block;
+    padding: 2px;
     position: absolute;
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    background: var(--sidebar-color);
-    transition: var(--tran-03);
+    right: 1.5rem;
+    top: 1.4rem;
+    transform: rotate(-135deg);
+    transition: all .2s ease-out;
 }
 
-body.drak .switch::before {
-    left: 24px;
-}
-/* 
-.home {
-    position: relative;
-    height: 100vh;
-    left: 250px;
-    width: calc(100% - 250px);
-    background: var(--body-color);
-    transition: var(--tran-05);
+.sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+    transform: rotate(45deg);
+    transition: all .2s ease-out;
 }
 
-.home .text {
-    font-size: 30px;
-    font-weight: 500;
-    color: var(--text-color);
-    padding: 8px 40px;
+.content {
+    flex: 1;
+    max-width: 100vw;
+    width: 100vw;
 }
 
-.sidebar.close ~ .home {
-    left: 88px;
-    width: calc(100% - 88px);
-} */
+/* Responsive */
+
+@media (min-width:768px) {
+    .content {
+        width: auto;
+    }
+}
     </style>
 </head>
+
 <body>
-    <nav class="sidebar close">
-        <header>
-            <div class="image-text">
-                <span class="image">
-                    <img src="elen.webp" alt="elen">
-                </span>
-
-                <div class="text header-text">
-                    <span class="name">codinglab</span>
-                    <span class="profession">web deloper</span>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <div class="h-100">
+                <div class="sidebar-logo">
+                    <a href="#">CodzSword</a>
                 </div>
-            </div>
+                <!-- Sidebar Navigation -->
+                <ul class="sidebar-nav">
+                    <li class="sidebar-header">
+                        Tools & Components
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link">
+                        <i class="fa-solid fa-house pe-2"></i>
+                            Profile
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#pages"
+                            aria-expanded="false" aria-controls="pages">
+                            <i class="fa-regular fa-file-lines pe-2"></i>
+                            Pages
+                        </a>
+                        <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="kelas" class="sidebar-link">Kelas</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="jadwal" class="sidebar-link">Jadwal</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="pesanan" class="sidebar-link">Pesanan</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="tiket" class="sidebar-link">Tiket</a>
+                            </li>
 
-            <i class='bx bx-chevron-right toggle'></i>
-        </header>
-
-        <div class="menu-bar">
-            <div class="menu">
-                <li class="search-box">
-                    <a href="">
-                        <i class='bx bx-search icon'></i>
-                        <input type="text" placeholder="Search....">
-                    </a>
-                </li>
-                <ul class="menu-links">
-                    <li class="nav-link">
-                        <a href="<?php echo base_url('admin/index') ?>">
-                            <i class='bx bx-home-alt icon'></i>
-                            <span class="text nav-text">Home</span>
-                        </a>
+                        </ul>
                     </li>
-                    <li class="nav-link">
-                        <a href="<?php echo base_url('admin/tiket') ?>">
-                        <i class='bx bx-food-menu icon'></i>
-                            <span class="text nav-text">Tiket</span>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#auth"
+                            aria-expanded="false" aria-controls="auth">
+                            <i class="fa-regular fa-user pe-2"></i>
+                            Akun
                         </a>
+                        <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Profile</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Log Out</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="nav-link">
-                        <a href="<?php echo base_url('admin/kelas') ?>">
-                        <i class='bx bx-door-open icon'></i>
-                            <span class="text nav-text">Kelas Bus</span>
-                        </a>
+                    <li class="sidebar-header">
+                        Multi Level Nav
                     </li>
-                    <li class="nav-link">
-                        <a href="<?php echo base_url('admin/jadwal') ?>">
-                        <i class='bx bx-notepad icon'></i>
-                            <span class="text nav-text">Jadwal</span>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#multi"
+                            aria-expanded="false" aria-controls="multi">
+                            <i class="fa-solid fa-share-nodes pe-2"></i>
+                            Multi Level
                         </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="<?php echo base_url('admin/pesanan') ?>">
-                        <i class='bx bx-credit-card-front icon'></i>
-                            <span class="text nav-text">Pesanan Tiket</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="<?php echo base_url('admin/akun') ?>">
-                        <i class='bx bx-user-circle icon' ></i>
-                            <span class="text nav-text">Akun Anda</span>
-                        </a>
+                        <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#multi-two" aria-expanded="false" aria-controls="multi-two">
+                                    Two Links
+                                </a>
+                                <ul id="multi-two" class="sidebar-dropdown list-unstyled collapse">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Link 1</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Link 2</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
+        </aside>
+        <!-- Main Component -->
+        <div class="main">
+            <nav class="navbar navbar-expand px-3 border-bottom">
+                <!-- Button for sidebar toggle -->
+                <button class="btn" type="button" data-bs-theme="dark">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+            <main class="content px-3 py-2">
+                <div class="container-fluid">
+                    <div class="mb-3">
+                        <h3>Bootstrap Sidebar Tutorial</h3>
+                        
+  <main class="table">
+      <!-- Area konten utama -->
+      <div class="flex-1 p-4 w-full">
+      
+        <section class="table__header">
+            <h2></h2>
+            
+            <div class="flex md:gap-2">
+                                <a href="tambah_kelas" style="border-radius: 8px; 10%;" class="a a1">Tambah</a>
+                                </div>
+        </section>
+        
+                                
+  
+        <section class="table__body">
+            <table >
+                <thead>
+                    <tr>
+                        <th class="text-center">No</th>
+                        <th class="text-center">Kelas Bus</th>
+                        <th class="text-center">Jumlah Kursi</th>
+                        <th class="text-center">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                                            <?php
+                                            $no = 0;
+                                            foreach ($kelas as $row) :
+                                                $no++
+                                            ?>
+                                                <tr>
+                                                    <td class="whitespace-nowrap px-4 py-2 text-center text-gray-700">
+                                                        <?php echo $no ?>
+                                                    </td>
+                                                    <td class="whitespace-nowrap px-4 py-2 text-center text-gray-700">
+                                                        <?php echo $row->kelas ?>
+                                                    </td>
+                                                    <td class="whitespace-nowrap px-4 py-2 text-center text-gray-700">
+                                                        <?php echo $row->jumlah_kursi ?>
+                                                    </td>   
+                                                    <td data-cell="Aksi" class="justify-content-center px-3 py-4 flex">
+                                                    <a href="ubah_kelas" style="border-radius: 8px;margin-top: 10%;" class="a a1">Ubah</a>
 
-            <div class="bottom-content">
-                <li class="">
-                    <a href="" onclick="logout()">
-                        <i class='bx bx-log-out icon'></i>
-                        <span class="text nav-text"  >Logout</span>
-                    </a>
-                </li>
-
-                <li class="mode">
-                    <div class="moon-sun">
-                        <i class='bx bx-moon icon moon'></i> 
-                        <i class='bx bx-sun icon sun'></i> 
+                                                    <button style="border-radius: 8px;margin-top: 10%;" class="button button1">Hapus</button> 
+                                                    </td>                                             
+                                                </tr>
+                                            <?php endforeach; ?>
+                                        </tbody>
+            </table>
+        </section>
+    </main>
                     </div>
-                    <span class="mode-text text">Dark Mode</span>
-
-                    <div class="toggle-switch">
-                        <span class="switch"></span>
-                    </div>
-                </li>
-            </div>
+                </div>
+            </main>
         </div>
-    </nav>
-
-   
-
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
     <script src="script.js"></script>
     <script>
-        const body = document.querySelector("body"),
-      sidebar = body.querySelector(".sidebar"),
-      toggle = body.querySelector(".toggle"),
-      searchBtn = body.querySelector(".search-box"),
-      modeSwtich = body.querySelector(".toggle-switch"),
-      modeText = body.querySelector(".mode-text");
-
-      toggle.addEventListener("click", () =>{
-        sidebar.classList.toggle("close");
-      })
-      searchBtn.addEventListener("click", () =>{
-        sidebar.classList.remove("close");
-      })
-
-
-      modeSwtich.addEventListener("click", () =>{
-        body.classList.toggle("drak");
-
-        if(body.classList.contains("drak")){
-            modeText.innerText = "Light Mode"
-        }else{
-            modeText.innerText = "Drak Mode"
-        }
-      })
-
-      function logout(id) {
-    swal.fire({
-        title: ' Yakin Ingin Log Out',
-        text: "",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        cancelButtonText: 'Batal',
-        confirmButtonText: 'Log Out'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            Swal.fire({
-                icon: 'success',
-                title: 'Log Out',
-                showConfirmButton: false,
-                timer: 1500,
-
-            }).then(function() {
-                window.location.href = "<?php echo base_url('auth/logout_akun/')?>" + id;
-            });
-        }
-    });
-}
+        const toggler = document.querySelector(".btn");
+toggler.addEventListener("click",function(){
+    document.querySelector("#sidebar").classList.toggle("collapsed");
+});
     </script>
-
 </body>
+
 </html>

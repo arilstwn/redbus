@@ -294,6 +294,10 @@ nav.close ~ .dashboard .top {
     border-radius: 50%;
 }
 
+.container {
+    padding: 50px;
+}
+/* 
 .dashboard .dash-content {
     padding: 50px;
 }
@@ -315,8 +319,8 @@ nav.close ~ .dashboard .top {
     align-items: center;
     justify-content: center;
     font-size: 24px;
-}
-
+} */
+/* 
 .dash-content .title .text {
     font-size: 24px;
     font-weight: 500;
@@ -398,7 +402,7 @@ nav.close ~ .dashboard .top {
     margin-top: 20px;
     white-space: nowrap;
     color: var(--text-color);
-}
+} */
 
 @media (max-width: 1000px) {
     nav {
@@ -500,6 +504,181 @@ nav.close ~ .dashboard .top {
         display: none;
     }
 }
+
+
+
+
+
+main.table {
+   
+   box-shadow: 0 .4rem .8rem #0005;
+ 
+   overflow: hidden;
+}
+
+.container {
+    position: relative;
+   
+    background: transparent;
+  
+    border-radius: 20px;
+ 
+    display: flex;
+   
+    align-items: center;
+
+}
+
+.container .form {
+    padding: 30px;
+    
+}
+
+.title {
+    font-size: 1.2375rem;
+    color: #FFF;
+}
+
+.container .form .title {
+    position: relative;
+    font-size: 27px;
+    text: #fff;
+    font-weight: 600;
+}
+
+
+.form .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #4070f4;
+    border-radius: 25px;
+}
+
+.form .input-field {
+    position: relative;
+    height: 45px;
+    width: 260%;
+    margin-top: 20px;
+}
+
+.input-field input {
+    position: absolute;
+    height:  100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) {
+    border-bottom-color: #4070F4;
+}
+
+.input-field i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 27px;
+}
+
+.input-field input:is(:focus, :valid) ~ i {
+    border-bottom-color: #4070f4;
+}
+
+.input-field i.icon {
+    left: 0;
+}
+
+.input-field i.showHidePw {
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.form .checkbox-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input {
+    margin:  0 8px -2px 4px;
+    accent-color: #4070f4;
+}
+
+.form .text {
+    color: #333;
+    font-size: 14px;
+}
+
+.form a.text {
+    color: #4070f4;
+    text-decoration: none;
+}
+
+.form a:hover {
+    text-decoration: underline;
+}
+
+.form .button {
+    margin-top: 35px;
+}
+
+.form .button input {
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #4070f4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover {
+    background-color: #008CBA;
+}
+
+.form .login-signup {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.wkwkwkw {
+  width: 80%;
+  height: 6vh;
+  border-radius: 100px;
+  outline: none;
+  border: none;
+  background-color: #008CBA;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 7% 10%;
+  
+  
+}
+
+.wkwkwkw:hover {
+  scale: 0.99;
+}
+
     </style>
 </head>
 <body>
@@ -514,29 +693,29 @@ nav.close ~ .dashboard .top {
 
         <div class="menu-items">
             <ul class="nav-links">
-                <li><a href="#">
+                <li><a href="index">
                     <i class="uil uil-estate"></i>
-                    <span class="link-name">Dasboard</span>
+                    <span class="link-name">Home</span>
                 </a></li>
-                <li><a href="#">
-                    <i class="uil uil-file-landscape"></i>
-                    <span class="link-name">Content</span>
+                <li><a href="jadwal">
+                <i class="uil uil-file-bookmark-alt"></i>
+                    <span class="link-name">Jadwal</span>
                 </a></li>
-                <li><a href="#">
+                <li><a href="kelas">
                     <i class="uil uil-chart"></i>
-                    <span class="link-name">Chart</span>
+                    <span class="link-name">Kelas</span>
                 </a></li>
-                <li><a href="#">
-                    <i class="uil uil-thumbs-up"></i>
-                    <span class="link-name">Like</span>
+                <li><a href="tiket">
+                <i class="uil uil-pricetag-alt"></i>
+                    <span class="link-name">Tiket</span>
                 </a></li>
-                <li><a href="#">
-                    <i class="uil uil-comments"></i>
-                    <span class="link-name">Pesan</span>
+                <li><a href="pesanan">
+                <i class="uil uil-notes"></i>
+                    <span class="link-name">Pesanan</span>
                 </a></li>
-                <li><a href="#">
-                    <i class="uil uil-share"></i>
-                    <span class="link-name">Share</span>
+                <li><a href="akun">
+                <i class="uil uil-user"></i>
+                    <span class="link-name">Akun</span>
                 </a></li>
             </ul>
 
@@ -569,10 +748,10 @@ nav.close ~ .dashboard .top {
                 <input type="text" placeholder="Search here.....">
             </div>
 
-            <img src="image/elen.we" alt="">
+            <img src="umika.jpeg" alt="">
         </div>
 
-        <div class="dash-content">
+        <!-- <div class="dash-content">
             <div class="overview">
                 <div class="title">
                     <i class="uil uil-tachometer-fast-alt"></i>
@@ -598,48 +777,50 @@ nav.close ~ .dashboard .top {
                         <span class="number">1</span>
                     </div>
                 </div>
-            </div>
-
-            <!-- <div class="activity">
-                <div class="title">
-                    <i class="uil uil-clock-three"></i>
-                    <span class="text">Recent Activity</span>
-                </div>
-
-                <div class="activity-data">
-                    <div class="data names">
-                        <span class="data-title">Nama</span>
-                        <span class="data-list">Wahyu</span>
-                        <span class="data-list">Wahyu</span>
-                        <span class="data-list">Wahyu</span>
-                    </div>
-                    <div class="data email">
-                        <span class="data-title">Email</span>
-                        <span class="data-list">Wahyu@gmail.com</span>
-                        <span class="data-list">Wahyu@gmail.com</span>
-                        <span class="data-list">Wahyu@gmail.com</span>
-                    </div>
-                    <div class="data joined">
-                        <span class="data-title">Joined</span>
-                        <span class="data-list">2024-02-12</span>
-                        <span class="data-list">2024-02-12</span>
-                        <span class="data-list">2024-02-12</span>
-                    </div>
-                    <div class="data type">
-                        <span class="data-title">Type</span>
-                        <span class="data-list">New</span>
-                        <span class="data-list">New</span>
-                        <span class="data-list">New</span>
-                    </div>
-                    <div class="data status">
-                        <span class="data-title">Status</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                    </div>
-                </div>
             </div> -->
-        </div>
+
+              
+            <div class="container">
+                            <div class="forms">
+                                <div class="form login">
+                                    <span class="title">Ubah Tiket Bus</span>
+                    
+                                  <!-- ... (previous HTML code) ... -->
+                                  <?php foreach ($tiket as $row) : ?>
+                        <form action="<?php echo base_url('admin/aksi_ubah_tiket') ?>" method="post">
+                            <input type="hidden" name="id" value="<?php echo $row->id ?>">
+                    
+                            <div class="input-field">
+                                <input type="text" id="nama_tiket" name="nama_tiket" placeholder="Nama Tiket Bus" required value="<?php echo $row->nama_tiket ?>">
+                                <i class="uil uil-edit-alt"></i>
+                            </div>
+                    
+                            <div class="input-field">
+                                <input type="text" id="kelas" name="kelas" placeholder="Kelas Bus" required value="<?php echo $row->kelas ?>">
+                                <i class="uil uil-edit-alt"></i>
+                            </div>
+                    
+                            <div class="input-field">
+                                <input type="text" id="tujuan" name="tujuan" placeholder="Tujuan Bus" required value="<?php echo $row->tujuan ?>">
+                                <i class="uil uil-edit-alt"></i>
+                            </div>
+                    
+                            <div class="input-field">
+                                <input type="text" id="harga" name="harga" placeholder="Harga Tiket Bus" required value="<?php echo $row->harga ?>">
+                                <i class="uil uil-edit-alt"></i>
+                            </div>
+                    
+                            <div class="input-field button my-12">
+                                <button type="submit" class="wkwkwkw">Ubah</button>
+                            </div>
+                        </form>
+                    <?php endforeach; ?>
+                    
+                    
+                    
+                                
+                            </div>
+                        </div>
     </section>
     <script src="script.js"></script>
     <script>

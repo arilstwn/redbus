@@ -99,4 +99,55 @@ class Admin extends CI_Controller {
     }
   
 
+  /* ===== Ubah Tiket ===== */
+  	
+	// Your Controller
+public function ubah_tiket()
+{
+    $data['tiket'] = $this->m_model->get_data('tiket')->result();
+    $this->load->view('admin/ubah_tiket', $data);
+}
+
+public function aksi_ubah_tiket()
+{
+    $data = array(
+        'nama_tiket' => $this->input->post('nama_tiket'),
+        'kelas' => $this->input->post('kelas'),
+        'tujuan' => $this->input->post('tujuan'),
+        'harga' => $this->input->post('harga'),
+    );
+
+    $id = $this->input->post('id'); // Extracted the id for better readability
+
+    $eksekusi = $this->m_model->ubah_data('tiket', $data, array('id' => $id));
+
+    if ($eksekusi) {
+        $this->session->set_flashdata('sukses', 'Berhasil');
+        redirect(base_url('admin/tiket'));
+    } else {
+        $this->session->set_flashdata('error', 'Gagal mengubah data');
+        redirect(base_url('admin/ubah_tiket/' . $id)); // Fixed the redirection
+    }
+}
+
+
+	
+
+
+  /* ===== Ubah Jadwal ===== */
+  public function ubah_jadwal()
+  {
+	$this->load->view('admin/ubah_jadwal');
+  }
+
+  /* ===== Ubah kelas ===== */
+  public function ubah_kelas()
+  {
+	$this->load->view('admin/ubah_kelas');
+  }
+
+
+
+
+
 }

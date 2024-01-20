@@ -297,7 +297,7 @@ nav.close ~ .dashboard .top {
 .container {
     padding: 50px;
 }
-
+/* 
 .dashboard .dash-content {
     padding: 50px;
 }
@@ -319,8 +319,8 @@ nav.close ~ .dashboard .top {
     align-items: center;
     justify-content: center;
     font-size: 24px;
-} 
- 
+} */
+/* 
 .dash-content .title .text {
     font-size: 24px;
     font-weight: 500;
@@ -402,7 +402,7 @@ nav.close ~ .dashboard .top {
     margin-top: 20px;
     white-space: nowrap;
     color: var(--text-color);
-}
+} */
 
 @media (max-width: 1000px) {
     nav {
@@ -508,119 +508,175 @@ nav.close ~ .dashboard .top {
 
 
 
-/* * {
-    margin: 0;
-    padding: 0;
-
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
- 
-body {
-    min-height: 100vh;
-    background: url(main.jpeg) center / cover;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-} */
 
 main.table {
-    width: 82vw;
-    height: 90vh;
-    background-color: #fff5;
+   
+   box-shadow: 0 .4rem .8rem #0005;
+ 
+   overflow: hidden;
+}
+
+.container {
+    position: relative;
+   
+    background: transparent;
+  
+    border-radius: 20px;
+ 
+    display: flex;
+   
+    align-items: center;
+
+}
+
+.container .form {
+    padding: 30px;
     
-    backdrop-filter: blur(7px);
-    box-shadow: 0 .4rem .8rem #0005;
-    border-radius: .8rem;
-    overflow: hidden;
 }
 
-.table__header {
-    width: 100%;
-    height: 10%;
-    background-color: #fff4;
-    padding: .8rem 1rem;
+.title {
+    font-size: 1.2375rem;
+    color: #FFF;
 }
 
-.table__body {
-    width: 95%;
-    max-height: calc(89% - .8rem);
-    background: #fffb;
-
-    margin: .8rem auto;
-    border-radius: .6rem;
-
-    overflow: auto;
+.container .form .title {
+    position: relative;
+    font-size: 27px;
+    text: #fff;
+    font-weight: 600;
 }
 
-.table__body::-webkit-scrollbar-thumb {
-    border-radius: .5rem;
-    background-color: #0004;
-    visibility: hidden;
-}
 
-.table__body:hover:-webkit-scrollbar-thumb {
-    visibility: visible;
-}
-
-table {
-    width: 100%;
-}
-
-td img {
-    width: 36px;
-    height: 36px;
-    margin-right: .5rem;
-    border-radius: 50%;
-
-    vertical-align: middle;
-}
-
-table, th, td {
-    border-collapse: collapse;
-    padding: 1rem;
-    text-align:left;
-}
-
-thead th {
-    position: sticky;
-    top: 0;
+.form .title::before {
+    content: '';
+    position: absolute;
     left: 0;
-    background-color: #d5dedefe;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #4070f4;
+    border-radius: 25px;
 }
 
-tbody tr:nth-child(even) {
-    background-color: #0000000b;
+.form .input-field {
+    position: relative;
+    height: 45px;
+    width: 260%;
+    margin-top: 20px;
 }
 
-tbody tr:hover {
-    background-color: #fff6;
+.input-field input {
+    position: absolute;
+    height:  100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
 }
 
-.status {
-    padding: .4rem 0;
-    border-radius: 2rem;
+.input-field input:is(:focus, :valid) {
+    border-bottom-color: #4070F4;
+}
+
+.input-field i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 27px;
+}
+
+.input-field input:is(:focus, :valid) ~ i {
+    border-bottom-color: #4070f4;
+}
+
+.input-field i.icon {
+    left: 0;
+}
+
+.input-field i.showHidePw {
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.form .checkbox-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input {
+    margin:  0 8px -2px 4px;
+    accent-color: #4070f4;
+}
+
+.form .text {
+    color: #333;
+    font-size: 14px;
+}
+
+.form a.text {
+    color: #4070f4;
+    text-decoration: none;
+}
+
+.form a:hover {
+    text-decoration: underline;
+}
+
+.form .button {
+    margin-top: 35px;
+}
+
+.form .button input {
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #4070f4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover {
+    background-color: #008CBA;
+}
+
+.form .login-signup {
+    margin-top: 30px;
     text-align: center;
 }
 
-.status.delivered {
-    background-color: #86e49d;
-    color: #006b21;
+.wkwkwkw {
+  width: 80%;
+  height: 6vh;
+  border-radius: 100px;
+  outline: none;
+  border: none;
+  background-color: #008CBA;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 7% 10%;
+  
+  
 }
 
-.status.cancelled {
-    background-color: #d893e3;
-    color: #b30021;
-}
-
-.status.shipped {
-    background-color: #6fcaea;  
-}
-
-@media (max-width: 1000px) {
-    td:not(:first-of-type) {
-        min-width: 12.1rem;
-    }
+.wkwkwkw:hover {
+  scale: 0.99;
 }
 
     </style>
@@ -704,159 +760,67 @@ tbody tr:hover {
 
                 <div class="boxes">
                     <div class="box box1">
-                    <i class="uil uil-notes"></i>
-                        <span class="text">Total Pesanan Tiket</span>
+                        <i class="uil uil-thumbs-up"></i>
+                        <span class="text">Total Likes</span>
                         <span class="number">1</span>
                     </div>
                
                     <div class="box box2">
-                    <i class="uil uil-pricetag-alt"></i>
-                        <span class="text">Jumlah Tiket</span>
+                        <i class="uil uil-comments"></i>
+                        <span class="text">Komes</span>
                         <span class="number">1</span>
                     </div>
               
                     <div class="box box3">
-                    <i class="uil uil-envelope"></i>
-                        <span class="text">Email Pelanggan</span>
+                        <i class="uil uil-share"></i>
+                        <span class="text">Total Share</span>
                         <span class="number">1</span>
                     </div>
                 </div>
             </div> -->
 
-    <main class="table">
-        <section class="table__header">
-            
-        </section>
-        <section class="table__body">
-            <table >
-                <thead>
-                    <tr>
-                        <th>id</th>
-                        <th>nama</th>
-                        <th>makan</th>
-                        <th>tidur</th>
-                        <th>tepar</th>
-                        <th>status</th>
-                        <th>males</th>
-                    </tr>
-                </thead>
-                <body>
-                    <tr class="text-center px-3 py-3">
-                        <td> 1 </td>
-                        <td> <img src="elen.png">Elaina Chan </td>
-                        <td> seoul </td>
-                        <td> 17, 2023 </td>
-                        <td> desemmber </td>
-                        <td>
-                            <p class="status delivered">delivered</p>
-                        </td>
-                        <td> <strong>10000</strong> </td>
-                    </tr>
-                    <tr class="text-center px-3 py-3">
-                        <td> 2 </td>
-                        <td> <img src="elen.png">Elaina Chan </td>
-                        <td> seoul </td>
-                        <td> 17, 2023 </td>
-                        <td> desemmber </td>
-                        <td>
-                            <p class="status cancelled">cancelled</p>
-                        </td>
-                        <td> <strong>10000</strong> </td>
-                    </tr>
-                    <tr class="text-center px-3 py-3">
-                        <td> 3 </td>
-                        <td> <img src="elen.png">Elaina Chan </td>
-                        <td> seoul </td>
-                        <td> 17, 2023 </td>
-                        <td> desemmber </td>
-                        <td>
-                            <p class="status shipped">shipped</p>
-                        </td>
-                        <td> <strong>10000</strong> </td>
-                    </tr>
-                    <tr class="text-center px-3 py-3">
-                        <td> 4 </td>
-                        <td> <img src="elen.png">Elaina Chan </td>
-                        <td> seoul </td>
-                        <td> 17, 2023 </td>
-                        <td> desemmber </td>
-                        <td>
-                            <p>delivered</p>
-                        </td>
-                        <td> <strong>10000</strong> </td>
-                    </tr>
-                    <tr class="text-center px-3 py-3">
-                        <td> 5 </td>
-                        <td> <img src="elen.png">Elaina Chan </td>
-                        <td> seoul </td>
-                        <td> 17, 2023 </td>
-                        <td> desemmber </td>
-                        <td>
-                            <p>delivered</p>
-                        </td>
-                        <td> <strong>10000</strong> </td>
-                    </tr>
-                    <tr class="text-center px-3 py-3">
-                        <td> 6 </td>
-                        <td> <img src="elen.png">Elaina Chan </td>
-                        <td> seoul </td>
-                        <td> 17, 2023 </td>
-                        <td> desemmber </td>
-                        <td>
-                            <p>delivered</p>
-                        </td>
-                        <td> <strong>10000</strong> </td>
-                    </tr>
-                    <tr class="text-center px-3 py-3">
-                        <td> 7 </td>
-                        <td> <img src="elen.png">Elaina Chan </td>
-                        <td> seoul </td>
-                        <td> 17, 2023 </td>
-                        <td> desemmber </td>
-                        <td>
-                            <p>delivered</p>
-                        </td>
-                        <td> <strong>10000</strong> </td>
-                    </tr>
-                    <tr class="text-center px-3 py-3">
-                        <td> 8 </td>
-                        <td> <img src="elen.png">Elaina Chan </td>
-                        <td> seoul </td>
-                        <td> 17, 2023 </td>
-                        <td> desemmber </td>
-                        <td>
-                            <p>delivered</p>
-                        </td>
-                        <td> <strong>10000</strong> </td>
-                    </tr>
-                    <tr class="text-center px-3 py-3">
-                        <td> 9 </td>
-                        <td> <img src="elen.png">Elaina Chan </td>
-                        <td> seoul </td>
-                        <td> 17, 2023 </td>
-                        <td> desemmber </td>
-                        <td>
-                            <p>delivered</p>
-                        </td>
-                        <td> <strong>10000</strong> </td>
-                    </tr>
-                    <tr class="text-center px-3 py-3">
-                        <td> 10 </td>
-                        <td> <img src="elen.png">Elaina Chan </td>
-                        <td> seoul </td>
-                        <td> 17, 2023 </td>
-                        <td> desemmber </td>
-                        <td>
-                            <p>delivered</p>
-                        </td>
-                        <td> <strong>10000</strong> </td>
-                    </tr>
-                </body>
-            </table>
-        </section>
-    </main>
-    
-      
+              
+            <div class="container">
+                            <div class="forms">
+                                <div class="form login">
+                                    <span class="title">Ubah Tiket Bus</span>
+                    
+                                  <!-- ... (previous HTML code) ... -->
+                                  <?php foreach ($tiket as $row) : ?>
+                        <form action="<?php echo base_url('admin/aksi_ubah_tiket') ?>" method="post">
+                            <input type="hidden" name="id" value="<?php echo $row->id ?>">
+                    
+                            <div class="input-field">
+                                <input type="text" id="nama_tiket" name="nama_tiket" placeholder="Nama Tiket Bus" required value="<?php echo $row->nama_tiket ?>">
+                                <i class="uil uil-edit-alt"></i>
+                            </div>
+                    
+                            <div class="input-field">
+                                <input type="text" id="kelas" name="kelas" placeholder="Kelas Bus" required value="<?php echo $row->kelas ?>">
+                                <i class="uil uil-edit-alt"></i>
+                            </div>
+                    
+                            <div class="input-field">
+                                <input type="text" id="tujuan" name="tujuan" placeholder="Tujuan Bus" required value="<?php echo $row->tujuan ?>">
+                                <i class="uil uil-edit-alt"></i>
+                            </div>
+                    
+                            <div class="input-field">
+                                <input type="text" id="harga" name="harga" placeholder="Harga Tiket Bus" required value="<?php echo $row->harga ?>">
+                                <i class="uil uil-edit-alt"></i>
+                            </div>
+                    
+                            <div class="input-field button my-12">
+                                <button type="submit" class="wkwkwkw">Ubah</button>
+                            </div>
+                        </form>
+                    <?php endforeach; ?>
+                    
+                    
+                    
+                                
+                            </div>
+                        </div>
     </section>
     <script src="script.js"></script>
     <script>

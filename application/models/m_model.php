@@ -1,8 +1,15 @@
 <?php
 class M_model extends CI_Model
 {
-    function get_data($table){
+    public function get_data($table)
+    {
         return $this->db->get($table);
+    }
+
+    public function ubah_data($tabel, $data, $where)
+    {
+        $data=$this->db->update($tabel, $data, $where);
+        return $this->db->affected_rows();
     }
     public function get_image_by_id($table, $id)
     {
@@ -45,5 +52,11 @@ class M_model extends CI_Model
     {
         $this->db->insert($table, $data);
     }
+
+    // public function ubah_data($tabel, $data, $where)
+    // {
+    //     $data=$this->db->update($tabel, $data, $where);
+    //     return $this->db->affected_rows();
+    // }
   
 }
